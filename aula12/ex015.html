@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>  
+        body    {
+            background-color: rgb(59, 32, 1);
+            font: 50px Arial;
+            text-align: center;
+            color: bisque;
+
+            p{
+                font: 20px Arial;
+                color:  rgb(59, 32, 1);
+            }
+
+        }   
+        
+        div#ball {
+            background-image: url('https://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png') ; 
+            background-repeat: no-repeat;
+            /*background-size: cover;
+            background-position: center;
+            background-attachment: fixed;*/
+            
+            line-height: 210px;
+            width: 200px;
+            height: 210px;
+            text-align: center;
+            border-radius: 50%;
+            
+
+        }
+            
+
+        div#area {
+            font: 20pt  Arial;
+            background-color: bisque;
+            color: black;
+            line-height: 300px;
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            border-radius: 5%;
+            box-shadow: 7px 6px 20px 0px rgba(0, 0, 0, 0.541);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 100px auto;
+            flex-direction: column;
+
+        }   
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <section>
+        <div id="area"> 
+            <p>Agora são 9 horas</p>
+        <div id="ball"> 
+
+        </div> </div>
+    </section>
+    <script>
+        let agora = new Date()
+            let hora = agora.getHours()
+            console.log(`Agora são ${hora} horas`)
+            if (hora > 0 && hora < 5)
+                console.log('Boa madrugada!')
+            else if (hora < 12)
+                console.log('Bom dia!')
+            else if (hora <= 17)
+                console.log('Boa tarde!')
+            else if (hora <= 24)
+                console.log('Boa noite!')
+    </script>
+    
+</body>
+</html>
